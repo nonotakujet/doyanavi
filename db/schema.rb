@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218084211) do
+ActiveRecord::Schema.define(version: 20150218135928) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-    t.integer  "type",              default: 0, null: false
     t.integer  "max_selection_num", default: 0, null: false
+    t.integer  "score",             default: 0, null: false
+    t.integer  "category",          default: 0, null: false
   end
 
   create_table "sessions", force: :cascade do |t|
