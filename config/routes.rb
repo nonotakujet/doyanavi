@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
   resources :companies
 
-  get '/' => 'root#index', :as => 'index'
+  # for index page of this application.
+  root 'root#index'
+
+  # for result page
+  post '/consult' => 'root#consult', as: :consult
+
+  # for company select
+  get 'company/' => 'company#index', as: 'company_index'
+  get 'company/select/:type' => 'company#select', as: 'company_select'
+  post 'company/add/:company_id' => 'company#add', as: 'company_add'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,4 +4,8 @@ class RootController < ApplicationController
   def index
   end
 
+  # POST /
+  def consult
+  end
+
 end
