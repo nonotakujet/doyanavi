@@ -15,6 +15,11 @@ bundle install --without production
 bundle exec rake RAILS_ENV=development db:migrate
 ```
 
+### Insert CSV Data
+```bash
+bundle exec rake db:seed_fu
+```
+
 #### Start Server
 ```bash
 rails server
