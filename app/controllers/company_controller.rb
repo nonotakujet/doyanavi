@@ -4,8 +4,11 @@ class CompanyController < ApplicationController
   def index
   end
 
-  # GET /select/:type
+  # GET /select/:category
   def select
+    category = params[:category]
+    @companies = Company.where(:category => category)
+    render :json => @companies
   end
 
   # POST /add/:company_id

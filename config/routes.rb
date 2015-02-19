@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # for company select
   get 'company/' => 'company#index', as: 'company_index'
-  get 'company/select/:type' => 'company#select', as: 'company_select'
+  get 'company/select/:category' => 'company#select', as: 'company_select'
   post 'company/add/:company_id' => 'company#add', as: 'company_add'
 
   # The priority is based upon order of creation: first created -> highest priority.
